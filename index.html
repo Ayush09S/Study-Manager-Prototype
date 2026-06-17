@@ -374,11 +374,11 @@ input[type=range]{width:100%;accent-color:var(--gold);}
 </header>
 
 <nav class="tabs">
-  <button class="tab active" onclick="setTab('calendar',this)">📅 Calendar</button>
-  <button class="tab" onclick="setTab('tasks',this)">✓ Tasks</button>
-  <button class="tab" onclick="setTab('timetable',this)">🏫 Timetable</button>
-  <button class="tab" onclick="setTab('planner',this)">✨ Auto-Plan</button>
-  <button class="tab" onclick="setTab('integrations',this)">🔗 Integrations</button>
+  <button class="tab active" onclick="setTab('calendar',this)">Calendar</button>
+  <button class="tab" onclick="setTab('tasks',this)">Tasks</button>
+  <button class="tab" onclick="setTab('timetable',this)">Timetable</button>
+  <button class="tab" onclick="setTab('planner',this)">Auto-Plan</button>
+  <button class="tab" onclick="setTab('integrations',this)">Integrations</button>
 </nav>
 
 <!-- CALENDAR -->
@@ -1965,7 +1965,7 @@ function deleteTask(id){
 function renderTasks(){
   const list = document.getElementById('tasksList');
   if(!state.tasks.length){
-    list.innerHTML=`<div class="empty"><div class="empty-icon">📝</div>No tasks yet. Add your first assignment above!</div>`; return;
+    list.innerHTML=`<div class="empty"><div class="empty-icon"></div>No tasks yet. Add your first assignment above!</div>`; return;
   }
   const sorted = [...state.tasks].sort((a,b)=>{
     if(a.done!==b.done) return a.done?1:-1;
